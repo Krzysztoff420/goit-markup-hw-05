@@ -14,6 +14,9 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-text-color);
+  margin: auto;
+  box-shadow: 12px 0 15px -4px rgb(0 0 0 / 20%),
+    -12px 0 15px -4px rgb(0 0 0 / 20%);
 }
 ul {
   padding: 0;
@@ -56,10 +59,27 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.nav-menu-item a {
+.nav-menu-item-a {
   text-decoration: none;
   color: var(--main-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
+.nav-menu-item-a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  bottom: -34px;
+  right: 0;
+  background: var(--accent-color);
+  transition: width 250ms, left 250ms;
+}
+.nav-menu-item-a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 .logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -95,7 +115,6 @@ ul {
   margin-right: 10px;
   fill: var(--contacts-header-color);
 }
-
 
 .nav-footer a {
   text-decoration: none;
@@ -340,6 +359,9 @@ ul {
   display: flex;
   text-decoration: none;
   color: var(--icon-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
 }
 
 .social-icons-list-icon {
@@ -364,6 +386,8 @@ ul {
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link {
@@ -387,6 +411,7 @@ ul {
 
 .contacts a {
   color: var(--contacts-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-box {
   display: inline-flex;
@@ -419,7 +444,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--contrast-text-color);
   margin-bottom: 20px;
   margin-top: 12px;
 }
@@ -460,6 +485,9 @@ ul {
   background-color: var(--alternative-background-color);
   cursor: pointer;
   color: var(--alternative-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-buttons button:hover {
   background-color: var(--accent-color);
