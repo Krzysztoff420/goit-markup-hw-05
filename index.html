@@ -17,45 +17,51 @@
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="container">
-                <div class="flex-box">
-                    <div class="nav">
-                        <a class="logo" href="index.html">
-                            <span class="nav-logo"><span class="logo-color">Web</span>Studio</span>
-                        </a>
-                        <nav>
-                            <ul class="nav-menu">
-                                <li class="nav-menu-item"><a href="agencja.html">Agencja</a></li>
-                                <li class="nav-menu-item"><a href="portfolio.html">Portfolio</a></li>
-                                <li class="nav-menu-item"><a href="kontakt.html">Kontakt</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="nav-contact">
-                        <a href="mailto:info@devstudio.com">
-                            <svg class="envelope" width="16" height="12">
-                                <use href="images/icons.svg#icon-envelope"></use>
-                            </svg>
-                            info@devstudio.com</a>
-                        <a href="tel:+48111111111">
-                            <svg class="smartphone" width="10" height="16">
-                                <use href="images/icons.svg#icon-smartphone"></use>
-                            </svg>
-                            +48 111 111 111</a>
-                    </div>
+<header>
+    <div class="header">
+        <div class="container">
+            <div class="flex-box">
+                <div class="nav">
+                    <a class="logo">
+                        <span class="nav-logo"><a class="nav-logo" href="index.html"><span
+                                    class="logo-color">Web</span>Studio</a></span>
+                    </a>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="nav-menu-item"><a href="agencja.html">Agencja</a></li>
+                            <li class="nav-menu-item"><a href="portfolio.html">Portfolio</a></li>
+                            <li class="nav-menu-item"><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav-contact">
+                    <a href="mailto:info@devstudio.com">
+                        <svg class="envelope" width="16" height="12">
+                            <use href="images/icons.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com</a>
+                    <a href="tel:+48111111111">
+                        <svg class="smartphone" width="10" height="16">
+                            <use href="images/icons.svg#icon-smartphone"></use>
+                        </svg>
+                        +48 111 111 111</a>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <main>
         <div class="main-header">
             <div class="container">
                 <div class="main-header-items">
                     <h1 class="main-header-text">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-                    <button type="button" class="main-button">Zamów usługę</button>
+                    <button data-modal-open type="button" class="main-button">Zamów usługę</button>
+                    <div data-modal class="backdrop is-hidden">
+                        <div class="modal-box">
+                            <button data-modal-close class="modal-button-close">X</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,9 +123,24 @@
                 <div>
                     <h2 class="section-header">Czym się zajmujemy</h2>
                     <ul class="section-list">
-                        <li><img src="images/img3.jpg" width="370" height="294" alt="backend" /></li>
-                        <li><img src="images/img2.jpg" width="370" height="294" alt="multiplatform" /></li>
-                        <li><img src="images/img1.jpg" width="370" height="294" alt="UI/UX" /></li>
+                        <li>
+                            <div class="what-we-do">
+                            <img class="what-we-do-img" src="images/img3.jpg" width="370" height="294" alt="backend" />
+                            <p class="what-we-do-text">Aplikacje komputerowe</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="what-we-do">
+                            <img class="what-we-do-img" src="images/img2.jpg" width="370" height="294" alt="multiplatform" />
+                            <p class="what-we-do-text">Aplikacje mobilne</p>
+                            </div>
+                        </li>  
+                        <li>
+                            <div class="what-we-do">
+                            <img class="what-we-do-img" src="images/img1.jpg" width="370" height="294" alt="UI/UX" />
+                            <p class="what-we-do-text">Rozwiązania graficzne</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -393,6 +414,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
